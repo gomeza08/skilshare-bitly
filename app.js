@@ -58,18 +58,23 @@ let redirectMap = {};
 
 function parseSentence(sentence) {
   let sentArr = sentence.split(' ');
-  let result = "";
+  let sentence = "";
+  let ids = [];
   for (let i = 0; i < sentArr.length; i++) {
     let currentWord = sentArr[i];
     if (validURL(currentWord)) {
-      result += ' ' + shortenUrl(currentWord);
+      let trackerInfo = shortenUrl(currentWord);
+      sentence += ' ' + trackerInfo.link;
+      ids.push(trackerInfo.id);
+
     } else {
-      result += ' ' + currentWord;
+      sentence += ' ' + currentWord;
     }
 
   }
 
-  return result.trim();
+  return { sentence: result.trim(),
+          ids: ids};
 }
 
 function shortenUrl(url) {
@@ -79,7 +84,8 @@ function shortenUrl(url) {
     redirectUrl: url
   };
   console.log(redirectMap);
-  return '<a href="http://127.0.0.1:3000/redirect/' + id + '">' + url + '</a>';
+  return { link : '<a href="http://127.0.0.1:3000/redirect/' + id + '">' + url + '</a>',
+            id: id };
 }
 
 function makeId() {

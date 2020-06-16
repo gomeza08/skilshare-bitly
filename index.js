@@ -2,7 +2,8 @@
 
 function getNewSentence() {
     $.get('shorten/?s=' + $('#shorten_input').val(), function(data) {
-        $('#shorten_result').html(data);
+        $('#shorten_result_sentence').html(data.sentence);
+        $('#shorten_result_ids').html(data.ids);
     });
 }
 
