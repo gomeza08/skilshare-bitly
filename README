@@ -2,3 +2,4 @@ To run:
 1. have node installed
 2. run `npm install` from the root directory
 3. run `node app.js` from the root directory
+4. Navigate to 127.0.0.1:3000

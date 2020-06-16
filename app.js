@@ -58,22 +58,22 @@ let redirectMap = {};
 
 function parseSentence(sentence) {
   let sentArr = sentence.split(' ');
-  let sentence = "";
+  let newSentence = "";
   let ids = [];
   for (let i = 0; i < sentArr.length; i++) {
     let currentWord = sentArr[i];
     if (validURL(currentWord)) {
       let trackerInfo = shortenUrl(currentWord);
-      sentence += ' ' + trackerInfo.link;
+      newSentence += ' ' + trackerInfo.link;
       ids.push(trackerInfo.id);
 
     } else {
-      sentence += ' ' + currentWord;
+      newSentence += ' ' + currentWord;
     }
 
   }
 
-  return { sentence: result.trim(),
+  return { sentence: newSentence.trim(),
           ids: ids};
 }
 
