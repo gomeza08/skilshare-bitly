@@ -1,0 +1,25 @@
+<html>
+<head>
+  <title>Totally not a bit.ly ripoff</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <script src="/index.js"></script>
+</head>
+<body>
+    <div>
+        <label id="shorten_label" for="shorten">Enter the sentence you wish to add a tracker to: </label>
+        <input type="text" id="shorten_input">
+        <button type= "button" id="shorten_button" onclick="getNewSentence()">Get tracking link</button>
+    </div>
+    <div id="shorten_result"></div>
+    <div>
+        <label id="get_info_label" for="shorten">Enter the id of the tracker you want to see data on: </label>
+        <input type="text" id="get_info_input">
+        <button type= "button" id="shorten_button" onclick="getTrackerInfo()">Get tracker info</button>
+    </div>
+    <div id="get_info_result"></div>
+</body>
+</html>

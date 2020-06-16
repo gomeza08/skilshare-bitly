@@ -1,0 +1,14 @@
+{
+  "name": "skillshare-bitly",
+  "version": "1.0.0",
+  "description": "Bit.ly clone for skillshare",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "author": "Anthony Gomez",
+  "license": "ISC"
+}
