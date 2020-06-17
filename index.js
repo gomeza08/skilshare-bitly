@@ -1,7 +1,7 @@
 'use strict'
 
 function getNewSentence() {
-    $.get('shorten/?s=' + $('#shorten_input').val(), function(data) {
+    $.post('shorten/?s=' + $('#shorten_input').val(), function(data) {
         $('#shorten_result_sentence').html(data.sentence);
         if(data.ids && data.ids.length > 0) {
             $('#shorten_result_ids').html('IDs: \n ' + data.ids.reduce((acc, current) => acc + '<br>' + current, ""));

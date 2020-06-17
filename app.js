@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname+'/index.html'));
 })
 
-app.get('/shorten', (req, res) => {
+app.post('/shorten', (req, res) => {
   let shortenString = req.query.s;
   if(shortenString) {
     res.send(parseSentence(shortenString));
